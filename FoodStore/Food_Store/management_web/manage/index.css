@@ -1,0 +1,258 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ * {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ .grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 
+    "sidebar nav nav nav"
+		"sidebar main main main";
+	height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+ nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+ }
+ nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+ }
+ .logo .menu-icon {
+  color: #333;
+  display: flex;
+  margin-right: 14px;
+  font-size: 24px;
+  cursor: pointer;
+ }.logo .logo-name {
+  font-size: 24px;
+  color: #333;
+  font-weight: 500;
+ }
+ nav .sidebar {
+  grid-area: sidebar;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 16rem;
+  padding: 20px 0px;
+  background-color: #f8f9fa;
+  /*box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);*/
+ }
+ .sidebar .admin {
+  display: flex;
+  padding: 20px 20px;
+ }
+ .admin .admin-name {
+  font-size: 20px;
+  color: #333;
+  padding: 10px 10px;
+ }
+ .sidebar .sidebar-content {
+  position: fixed;
+  top: 20%;
+  padding: 30px 15px;
+ } 
+.sidebar-content .list {
+  list-style: none;
+  margin-bottom: 15px;
+ } 
+ .list .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  text-decoration: none;
+
+ } 
+ .nav-link .icon {
+  margin-right: 15px;
+  font-size: 25px;
+  color: red;
+ }
+
+ .nav-link .link {
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+ }
+li:hover {
+  background-color: lightgray;
+}
+
+ .search{
+  margin-right:-2.3rem;
+  height: 40px;
+  width:14rem;
+  border-radius: 60px;
+  outline: none;
+  font-family: 'Rubik', sans-serif;
+  border: 2px solid rgb(251,104,67);
+}
+.btn0{
+  height: 40px;
+  width: 3.5rem;
+  outline: none;
+  border: none;
+  background: rgb(251,104,67);
+  color: white;
+  border-radius: 60px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+
+/*------main------*/
+
+.main-container {
+  grid-area: main;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  margin-left: 0;
+  margin-right: 0px;
+  font-size: 0.8rem;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.main-cards {
+  display: flex;
+ 
+  gap: 20px;
+  margin: 20px 10px;
+}
+
+.card {
+  height: 7rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  color: rgb(255,255,255);
+  border-radius: 10px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2)
+}
+
+
+.col-sm-3:first-child .card {
+  background-color: rgb(58,140,207);
+}
+
+.col-sm-3:nth-child(2) .card {
+  background-color: rgb(232,79,93);
+}
+
+.col-sm-3:nth-child(3) .card {
+  background-color: rgb(71,189,137);
+}
+
+.col-sm-3:nth-child(4) .card {
+  background-color: rgb(247,185,84);
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+}
+
+.card-inner > span {
+  font-size: 50px;
+}
+
+
+/*-----CSS các trang thành phần----*/
+
+.panel .panel-heading {
+  padding-top: 30px;
+   margin-bottom: 40px;    
+ }
+
+
+ .panel .border {
+   padding: 50px 50px 50px 50px;
+   border: 1px solid gray;
+ }
+.container {
+  display: flex;
+  margin-top: 150px;
+  margin-left: 20%;
+  margin-right: 0px;
+  font-size: 0.8rem;
+}
+tr {
+  text-align: center;
+}
+th {
+  background-color: rgb(136, 160, 193);
+}
+
+button {
+  padding-left: 0px;
+  font-size: 0.8rem;
+  width: auto;
+  text-align: center;
+  border: none; 
+}
+.form-group {
+  width: 700px;
+  align-self: start;
+}
+
+.rounded-circle {
+  border-radius: 5px;
+}
+
+.col-sm-3:first-child .rounded-circle {
+  background-color: rgb(110,186,237);
+}
+
+.col-sm-3:nth-child(2) .rounded-circle {
+  background-color: rgb(255,158,158);
+}
+
+.col-sm-3:nth-child(3) .rounded-circle {
+  background-color: rgb(112,219,182);
+}
+
+.col-sm-3:nth-child(4) .rounded-circle {
+  background-color: rgb(247,220,154);
+}
+
+.rounded-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
